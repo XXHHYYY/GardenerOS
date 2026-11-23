@@ -1,4 +1,5 @@
 os/target/
+/user/target/
 *.log
 .idea/
 .vscode/
