@@ -5,7 +5,6 @@ struct Stdout;
 
 impl Write for Stdout {
     fn write_str(&mut self, s: &str) -> fmt::Result {
-        // 按UTF-8字节输出
         for byte in s.bytes() {
             console_putchar(byte as usize);
         }

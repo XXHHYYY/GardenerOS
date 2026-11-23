@@ -32,9 +32,7 @@ pub fn console_putchar(c: usize) {
 pub fn shutdown() -> ! {
     sbi_call(SBI_SHUTDOWN, 0, 0, 0);
 
-    // 关机失败时停止执行，避免递归panic
     loop {
         core::hint::spin_loop();
     }
-
 }

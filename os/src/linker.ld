@@ -6,9 +6,10 @@ BASE_ADDRESS = 0x80200000;
 SECTIONS
 {
     . = BASE_ADDRESS;
-    skernel = .;
 
+    skernel = .;
     stext = .;
+
     .text : {
         *(.text.entry)
         *(.text .text.*)
@@ -18,6 +19,7 @@ SECTIONS
     etext = .;
 
     srodata = .;
+
     .rodata : {
         *(.rodata .rodata.*)
         *(.srodata .srodata.*)
@@ -27,6 +29,7 @@ SECTIONS
     erodata = .;
 
     sdata = .;
+
     .data : {
         *(.data .data.*)
         *(.sdata .sdata.*)
